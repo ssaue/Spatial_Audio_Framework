@@ -124,8 +124,8 @@ $(document).ready(function(){initNavTree('sldoa_8h-example.html',''); initResiza
 <div class="line">    </div>
 <div class="line"><span class="keywordtype">void</span> <a name="a3"></a><a class="code" href="sldoa_8h.html#a32f5033789d2932f25480cc214a3f447">sldoa_initCodec</a>(<span class="keywordtype">void</span>* <span class="keyword">const</span> hSld);</div>
 <div class="line">    </div>
-<div class="line"><span class="keywordtype">void</span> <a name="a4"></a><a class="code" href="sldoa_8h.html#a03aa2cd0de2e0ea23a0cb4d9533c297e">sldoa_analysis</a>(<span class="keywordtype">void</span>* <span class="keyword">const</span> hSld,</div>
-<div class="line">                    <span class="keyword">const</span> <span class="keywordtype">float</span>** <span class="keyword">const</span> inputs,</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a4"></a><a class="code" href="sldoa_8h.html#ab0f5a0d0c4265c51db3c995c34e7252a">sldoa_analysis</a>(<span class="keywordtype">void</span>* <span class="keyword">const</span> hSld,</div>
+<div class="line">                    <span class="keyword">const</span> <span class="keywordtype">float</span> *<span class="keyword">const</span> * inputs,</div>
 <div class="line">                    <span class="keywordtype">int</span> nInputs,</div>
 <div class="line">                    <span class="keywordtype">int</span> nSamples,</div>
 <div class="line">                    <span class="keywordtype">int</span> isPlaying);</div>
@@ -215,7 +215,6 @@ $(document).ready(function(){initNavTree('sldoa_8h-example.html',''); initResiza
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">/* __SLDOA_H_INCLUDED__ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a__common_8h_html"><div class="ttname"><a href="__common_8h.html">_common.h</a></div><div class="ttdoc">A bunch of things that are common to many of the saf examples.</div></div>
 <div class="ttc" id="a__common_8h_html_af0ded734eade63c6af9f797988fffcd9"><div class="ttname"><a href="__common_8h.html#af0ded734eade63c6af9f797988fffcd9">CODEC_STATUS</a></div><div class="ttdeci">CODEC_STATUS</div><div class="ttdoc">Current status of the codec.</div><div class="ttdef"><b>Definition:</b> <a href="__common_8h_source.html#l00230">_common.h:230</a></div></div>
-<div class="ttc" id="asldoa_8h_html_a03aa2cd0de2e0ea23a0cb4d9533c297e"><div class="ttname"><a href="sldoa_8h.html#a03aa2cd0de2e0ea23a0cb4d9533c297e">sldoa_analysis</a></div><div class="ttdeci">void sldoa_analysis(void *const hSld, const float **const inputs, int nInputs, int nSamples, int isPlaying)</div><div class="ttdoc">Applies the spatially-localised active-intensity based direction-of-arrival estimator (SLDoA) onto th...</div></div>
 <div class="ttc" id="asldoa_8h_html_a0f7d61f4036adc0a266516ae9a9f68e6"><div class="ttname"><a href="sldoa_8h.html#a0f7d61f4036adc0a266516ae9a9f68e6">sldoa_getNumberOfBands</a></div><div class="ttdeci">int sldoa_getNumberOfBands(void)</div><div class="ttdoc">Returns the number frequency bands employed by sldoa.</div></div>
 <div class="ttc" id="asldoa_8h_html_a0fceee95929d2fce5482ceb3ed666cfb"><div class="ttname"><a href="sldoa_8h.html#a0fceee95929d2fce5482ceb3ed666cfb">sldoa_getProcessingDelay</a></div><div class="ttdeci">int sldoa_getProcessingDelay(void)</div><div class="ttdoc">Returns the processing delay in samples (may be used for delay compensation features)</div></div>
 <div class="ttc" id="asldoa_8h_html_a121ee2c39a49e7f0673cb53215e95c34"><div class="ttname"><a href="sldoa_8h.html#a121ee2c39a49e7f0673cb53215e95c34">sldoa_destroy</a></div><div class="ttdeci">void sldoa_destroy(void **const phSld)</div><div class="ttdoc">Destroys an instance of the sldoa.</div></div>
@@ -236,6 +235,7 @@ $(document).ready(function(){initNavTree('sldoa_8h-example.html',''); initResiza
 <div class="ttc" id="asldoa_8h_html_aa2ccc4d6e7eaf049fe7582ee5e3f2d6b"><div class="ttname"><a href="sldoa_8h.html#aa2ccc4d6e7eaf049fe7582ee5e3f2d6b">sldoa_setAnaOrderAllBands</a></div><div class="ttdeci">void sldoa_setAnaOrderAllBands(void *const hSld, int newValue)</div><div class="ttdoc">Sets the input/analysis order for all frequency bands.</div></div>
 <div class="ttc" id="asldoa_8h_html_aa976a30293d06480f11995f451757f06"><div class="ttname"><a href="sldoa_8h.html#aa976a30293d06480f11995f451757f06">sldoa_getNormType</a></div><div class="ttdeci">int sldoa_getNormType(void *const hSld)</div><div class="ttdoc">Returns the Ambisonic normalisation convention currently being usedto decode with,...</div></div>
 <div class="ttc" id="asldoa_8h_html_aacad0da9078f1b9b0d66b139e1f9cf0d"><div class="ttname"><a href="sldoa_8h.html#aacad0da9078f1b9b0d66b139e1f9cf0d">sldoa_getAnaOrderHandle</a></div><div class="ttdeci">void sldoa_getAnaOrderHandle(void *const hSld, float **pX_vector, int **pY_values, int *pNpoints)</div><div class="ttdoc">Returns the input/analysis order for all frequency bands.</div></div>
+<div class="ttc" id="asldoa_8h_html_ab0f5a0d0c4265c51db3c995c34e7252a"><div class="ttname"><a href="sldoa_8h.html#ab0f5a0d0c4265c51db3c995c34e7252a">sldoa_analysis</a></div><div class="ttdeci">void sldoa_analysis(void *const hSld, const float *const *inputs, int nInputs, int nSamples, int isPlaying)</div><div class="ttdoc">Applies the spatially-localised active-intensity based direction-of-arrival estimator (SLDoA) onto th...</div></div>
 <div class="ttc" id="asldoa_8h_html_ab1cab6cea30d6cc7367b4e374a2de1dc"><div class="ttname"><a href="sldoa_8h.html#ab1cab6cea30d6cc7367b4e374a2de1dc">sldoa_getProgressBar0_1</a></div><div class="ttdeci">float sldoa_getProgressBar0_1(void *const hSld)</div><div class="ttdoc">(Optional) Returns current intialisation/processing progress, between 0..1</div></div>
 <div class="ttc" id="asldoa_8h_html_ab4bb39778793b996ae4f8ea177b56db0"><div class="ttname"><a href="sldoa_8h.html#ab4bb39778793b996ae4f8ea177b56db0">sldoa_getAvg</a></div><div class="ttdeci">float sldoa_getAvg(void *const hSld)</div><div class="ttdoc">Returns the current DoA averaging coefficient value, 0..1.</div></div>
 <div class="ttc" id="asldoa_8h_html_abcef2884e15e3ae42af5bad74515901c"><div class="ttname"><a href="sldoa_8h.html#abcef2884e15e3ae42af5bad74515901c">sldoa_getMinFreq</a></div><div class="ttdeci">float sldoa_getMinFreq(void *const hSld)</div><div class="ttdoc">Returns the minimum analysis frequency, in Hz.</div></div>
@@ -253,7 +253,7 @@ $(document).ready(function(){initNavTree('sldoa_8h-example.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 3 2021 09:12:07 for Spatial_Audio_Framework by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat May 15 2021 10:10:45 for Spatial_Audio_Framework by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
